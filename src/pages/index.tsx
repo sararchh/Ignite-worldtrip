@@ -1,9 +1,11 @@
-import { Box, Center, Divider, Flex, Grid, GridItem, Image, Text } from '@chakra-ui/react';
+import { Box, Center, Divider, Flex, Grid, GridItem, Image, Text, useBreakpointValue } from '@chakra-ui/react';
 import type { NextPage } from 'next'
 import Banner from '../components/Banner';
 import ContinentsSlide from '../components/ContinentsSlide';
 
 import Header from '../components/Header';
+
+import { IoEllipseSharp } from "react-icons/io5";
 
 const arrayTravelTypes = [
   { src: '/assets/cocktail.png', title: 'vida noturna' },
@@ -14,22 +16,41 @@ const arrayTravelTypes = [
 ];
 
 const Home: NextPage = () => {
-
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
 
   return (
     <Box w='100vw' h='100%'>
       <Header />
       <Banner />
 
-      <Flex as='div' w='100%' h='145px' my='140px' justifyContent='center'>
-        <Grid templateColumns='repeat(5, 1fr)' gap={5} >
-          {arrayTravelTypes.map((travel, key) =>
-            <GridItem w='160px' justifyContent='center' alignItems='center' display='flex' flexDirection='column'>
-              <Image w='85' h='85' src={travel.src} />
-              <Text color='dark.800' fontWeight='semibold' mt='20px'>{travel.title}</Text>
-            </GridItem>
-          )}
-        </Grid>
+      <Flex as='div' w='100%' h='145px' my={['100px', '140px']} justifyContent='center'>
+        {isWideVersion && (
+          <Grid templateColumns='repeat(5, 1fr)' gap={5} >
+            {arrayTravelTypes.map((travel, key) =>
+              <GridItem w='160px' justifyContent='center' alignItems='center' display='flex' flexDirection='column'>
+                <Image w='85' h='85' src={travel.src} />
+                <Text color='dark.800' fontWeight='semibold' mt='20px'> {travel.title}</Text>
+              </GridItem>
+            )}
+          </Grid>
+        )}
+
+        {!isWideVersion && (
+          <Flex flexWrap='wrap' w='100%' justifyContent='center' >
+            {arrayTravelTypes.map((travel, key) =>
+              <GridItem w='150px' display='flex' mx='20px' justifyContent='center' >
+                <IoEllipseSharp color='#FFBA08' />
+                <Text as='p' color='dark.800' fontWeight='medium' fontSize='18px' mt='-6px' mx='3px'>
+                  {travel.title}
+                </Text>
+              </GridItem>
+            )}
+          </Flex>
+        )}
+
       </Flex>
 
       <Center height='50px'>
