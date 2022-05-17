@@ -26,9 +26,9 @@ const Home: NextPage = () => {
       <Header />
       <Banner />
 
-      <Flex as='div' w='100%' h='145px' my={['100px', '140px']} justifyContent='center'>
+      <Flex as='div' w='100%' h='145px' my={['50px', '140px']} justifyContent='center'>
         {isWideVersion && (
-          <Grid templateColumns='repeat(5, 1fr)' gap={5} >
+          <Grid templateColumns='repeat(5, 2fr)' gap={10} >
             {arrayTravelTypes.map((travel, key) =>
               <GridItem w='160px' justifyContent='center' alignItems='center' display='flex' flexDirection='column'>
                 <Image w='85' h='85' src={travel.src} />
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         )}
 
         {!isWideVersion && (
-          <Flex flexWrap='wrap' w='100%' justifyContent='center' >
+          <Flex as='div' flexWrap='wrap' w='100%' justifyContent='center'  >
             {arrayTravelTypes.map((travel, key) =>
               <GridItem w='150px' display='flex' mx='20px' justifyContent='center' >
                 <IoEllipseSharp color='#FFBA08' />
@@ -53,12 +53,12 @@ const Home: NextPage = () => {
 
       </Flex>
 
-      <Center height='50px'>
+      <Center height={['5px','50px']}>
         <Divider orientation='horizontal' size='10px' w='90px' h='2px' bg='dark.800' />
       </Center>
 
       <Box as='div' display='flex' alignItems='center' justifyContent='center' my='40px' >
-        <Text as='p' textAlign='center' color='dark.800' fontSize='36px' fontWeight='medium'>Vamos nessa? <br></br> Então escolha seu continente  </Text>
+        <Text as='p' textAlign='center' color='dark.800' fontSize={['20px','36px']} fontWeight='medium'>Vamos nessa? <br></br> Então escolha seu continente  </Text>
       </Box>
 
       <ContinentsSlide />
