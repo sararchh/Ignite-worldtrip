@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import { Continents } from '../../services/continents'
-import { AlertTitle, Flex, Text } from '@chakra-ui/react';
+
+import { Box, Flex, Grid, GridItem, Text, VStack } from '@chakra-ui/react';
+
 import Header from '../../components/Header';
+import CardInfo from '../../components/CardInfo';
 
 const Continent: React.FC = () => {
   const router = useRouter();
@@ -17,13 +20,38 @@ const Continent: React.FC = () => {
   }, [router.isReady])
 
   return (
-    <Flex>
+    <VStack>
       <Header />
-      <Text>{continentInfo?.title}</Text>
-      <Text>{continentInfo?.countries?.map((country: any) => (
-        <p>{country.title}</p>
+
+      <Flex backgroundImage={continentInfo?.src} w='100vw' h='500px' backgroundSize='cover' alignItems='end' px='100px' py='50px' >
+        <Text fontSize='48' fontWeight='semibold'>{continentInfo?.title}</Text>
+      </Flex>
+
+      <Flex as='div' w='100%' display='flex' justify='center' >
+        <Box as='div' w='45%'>
+          <Text fontWeight='regular' color='dark.800' fontSize='24' textAlign='justify'>{continentInfo?.summary}</Text>
+        </Box>
+
+        <Box as='div' w='35%' alignItems='center' justifyContent='center' display='flex'  >
+          <Grid templateColumns='repeat(3, 1fr)' gap={4} >
+            <CardInfo titleInfo={continentInfo?.qtd_countries} textInfo={'países'} />
+            <CardInfo titleInfo={continentInfo?.qtd_languages} textInfo={'línguas'} />
+            <CardInfo titleInfo={continentInfo?.qtd_cities} textInfo={'cidades +100'} />
+          </Grid>
+
+        </Box>
+      </Flex>
+
+      <Text color='red'>{continentInfo?.countries?.map((country: any) => (
+        <>
+          {/* <p>{country.title}</p> */}
+          {/* <Image src={country.thumb} /> */}
+          {/* <Image src={country.icon} />   */}
+        </>
       ))}</Text>
-    </Flex>
+
+
+    </VStack>
   )
 }
 

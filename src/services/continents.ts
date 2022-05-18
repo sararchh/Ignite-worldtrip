@@ -10,9 +10,9 @@ export const Continents = [
     qtd_languages: 50,
     qtd_cities: 50,
     countries: [
-      { title: 'Estados Unidos', subtitle: 'Washington', thumb: '', icon: '' },
-      { title: 'Canadá', subtitle: 'Otawa', thumb: '', icon: '' },
-      { title: 'México', subtitle: 'Cidade do México', thumb: '', icon: '' },
+      { title: 'Estados Unidos', subtitle: 'Washington', thumb: '/assets/Cities/americaNorte/eua.png', icon: '/assets/Cities/americaNorte/euaIcon.png' },
+      { title: 'Canadá', subtitle: 'Otawa', thumb: '/assets/Cities/americaNorte/canada.png', icon: '/assets/Cities/americaNorte/canadaIcon.png' },
+      { title: 'México', subtitle: 'Cidade do México', thumb: '/assets/Cities/americaNorte/mexico.png', icon: '/assets/Cities/americaNorte/mexicoIcon.png' },
     ],
   },
   {
@@ -25,9 +25,9 @@ export const Continents = [
     qtd_languages: 50,
     qtd_cities: 100,
     countries: [
-      { title: 'Argentina', subtitle: 'Buenos Aires', thumb: '', icon: '' },
-      { title: 'Peru', subtitle: 'Lima', thumb: '', icon: '' },
-      { title: 'Brasil', subtitle: 'Brasilia', thumb: '', icon: '' },
+      { title: 'Argentina', subtitle: 'Buenos Aires', thumb: '/assets/Cities/americaSul/argentina.png', icon: '/assets/Cities/americaSul/argentinaIcon.png' },
+      { title: 'Peru', subtitle: 'Lima', thumb: '/assets/Cities/americaSul/peru.png', icon: '/assets/Cities/americaSul/peruIcon.png' },
+      { title: 'Brasil', subtitle: 'Brasilia', thumb: '/assets/Cities/americaSul/brasil.png', icon: '/assets/Cities/americaSul/brasilIcon.png' },
     ],
   },
   {
@@ -40,9 +40,9 @@ export const Continents = [
     qtd_languages: 50,
     qtd_cities: 27,
     countries: [
-      { title: 'Marrocos', subtitle: 'Rabat', thumb: '', icon: '' },
-      { title: 'Nigéria', subtitle: 'Abuja', thumb: '', icon: '' },
-      { title: 'Etiópia', subtitle: 'Addis Ababa', thumb: '', icon: '' },
+      { title: 'Marrocos', subtitle: 'Rabat', thumb: '/assets/Cities/africa/marrocos.png', icon: '/assets/Cities/africa/marrocosIcon.png' },
+      { title: 'Nigéria', subtitle: 'Abuja', thumb: '/assets/Cities/africa/nigeria.png', icon: '/assets/Cities/africa/nigeriaIcon.png' },
+      { title: 'Etiópia', subtitle: 'Addis Ababa', thumb: '/assets/Cities/africa/etiopia.png', icon: '/assets/Cities/africa/etiopiaIcon.png' },
     ],
   },
   {
@@ -55,9 +55,9 @@ export const Continents = [
     qtd_languages: 50,
     qtd_cities: 57,
     countries: [
-      { title: 'China', subtitle: 'Pequim', thumb: '', icon: '' },
-      { title: 'Japão', subtitle: 'Tóquio', thumb: '', icon: '' },
-      { title: 'Irã', subtitle: 'Teerão', thumb: '', icon: '' },
+      { title: 'China', subtitle: 'Pequim', thumb: '/assets/Cities/asia/china.png', icon: '/assets/Cities/asia/chinaIcon.png' },
+      { title: 'Japão', subtitle: 'Tóquio', thumb: '/assets/Cities/asia/japao.png', icon: '/assets/Cities/asia/japaoIcon.png' },
+      { title: 'Irã', subtitle: 'Teerão', thumb: '/assets/Cities/asia/ira.png', icon: '/assets/Cities/asia/iraIcon.png' },
     ],
   },
   {

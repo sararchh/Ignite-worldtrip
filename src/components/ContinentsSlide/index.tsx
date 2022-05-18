@@ -16,7 +16,7 @@ const ContinentsSlide: React.FC = () => {
   const router = useRouter();
 
   return (
-    <Flex as='div' w='100vw' h={['auto', '500px']} px={['0px', '150px']} py={['0px', '20px']}>
+    <Flex as='div' w='100vw' h={['auto', '500px']} px={['0px', '150px']} py={['0px', '20px']} cursor='pointer'>
       <Swiper
         cssMode={true}
         navigation={true}
