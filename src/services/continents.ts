@@ -41,7 +41,7 @@ export const Continents = [
     qtd_cities: 27,
     countries: [
       { title: 'Marrocos', subtitle: 'Rabat', thumb: '/assets/Cities/africa/marrocos.png', icon: '/assets/Cities/africa/marrocosIcon.png' },
-      { title: 'Nigéria', subtitle: 'Abuja', thumb: '/assets/Cities/africa/nigeria.png', icon: '/assets/Cities/africa/nigeriaIcon.png' },
+      { title: 'Nigéria', subtitle: 'Abuja', thumb: '/assets/Cities/africa/nigerio.png', icon: '/assets/Cities/africa/nigeriaIcon.png' },
       { title: 'Etiópia', subtitle: 'Addis Ababa', thumb: '/assets/Cities/africa/etiopia.png', icon: '/assets/Cities/africa/etiopiaIcon.png' },
     ],
   },

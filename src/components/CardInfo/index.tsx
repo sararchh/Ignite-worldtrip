@@ -9,9 +9,9 @@ type CardInfoProps = {
 const CardInfo: React.FC<CardInfoProps> = ({ titleInfo, textInfo }) => {
   return (
     
-      <GridItem w='98px' h='99px' alignItems='center' display='flex' flexDirection='column'>
-        <Text fontWeight='bold' color='highlight.900' fontSize='40'>{titleInfo}  </Text>
-        <Text fontWeight='bold' color='dark.800' fontSize='14'>{textInfo} </Text>
+      <GridItem  h='99px' alignItems='center' display='flex' flexDirection='column'>
+        <Text fontWeight='bold' color='highlight.900' fontSize={['30','50']}>{titleInfo}  </Text>
+        <Text fontWeight='bold' color='dark.800' fontSize={['15','20']}>{textInfo} </Text>
       </GridItem>
 
   );
